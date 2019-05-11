@@ -545,6 +545,10 @@ footer div.column p {
 		color: #2d3950;
 		transition: 0.4s linear;
 	}
+	.list-item a:hover {
+		color: #15a4fa;
+		background-color: transparent;
+	}
 	/*----------COMPONENTS SECTION----------*/
 	/* Style for "margin & padding for COMPONENTS SECTION" */
 	#components div.row {
