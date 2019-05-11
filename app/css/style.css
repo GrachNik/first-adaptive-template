@@ -266,7 +266,7 @@ div.imgs {
 	display: flex;
 	transition: 0.4s linear;
 }
-div.imgs:hover {
+#gallery div.row div.column:hover div.imgs {
 	opacity: 0.3;
 }
 /* Style for "div with hover links on img" */
