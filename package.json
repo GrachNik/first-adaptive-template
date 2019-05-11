@@ -1,0 +1,19 @@
+{
+  "name": "first_project",
+  "version": "1.0.0",
+  "description": "First time use all tools",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Nikita Grachev",
+  "license": "ISC",
+  "devDependencies": {
+    "browser-sync": "^2.26.3",
+    "del": "^4.1.0",
+    "gulp": "^4.0.0",
+    "gulp-autoprefixer": "^6.0.0",
+    "gulp-imagemin": "^5.0.3",
+    "imagemin-pngquant": "^7.0.0"
+  }
+}
