@@ -1,0 +1,756 @@
+/*----------MOBILE FIRST----------*/
+* {	
+	margin: 0;
+	box-sizing: border-box; /*helps add margin and padding without changing of the elements size*/
+}
+h1, h2, h3, p {
+	margin: 0;
+	padding: 0;
+}
+body {
+	margin: 0 auto;
+	min-width: 430px;
+	max-width: 1600px; /*layout in the center of browser*/
+}
+a {
+	text-decoration: none;
+}
+/*----------HEADER SECTION----------*/
+/*main rules for row and column*/
+.row {
+	display: flex;
+	flex-flow: row wrap;
+	width: 100%;
+}
+.column {
+	display: flex;
+	flex-direction: column;
+	flex-basis: 100%;
+}
+header.column, nav.column {
+	background-color: #f6f9f9;
+}
+header {
+	justify-content: center;
+	height: 6.2rem;
+}
+/*rules for logo and icon row*/
+.head-row, #logo {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+#logo {
+	margin-left: 15.6%;
+}
+.logo-img {
+	margin-right: 1rem;
+}
+/* Style for "STRICT" */
+.logo-text {
+	color: #2d3950;
+	font: 700 1.9rem Lato, Arial, sans-serif;
+	text-transform: uppercase;
+	letter-spacing: 0.75px;
+}
+/*Style for hamburger */
+.icon {
+	margin-right: 16.3%;
+}
+.fa-bars {
+	font-size: 2.3rem;
+	cursor: pointer;
+	color: #2d3950;
+	transition: 0.3s linear;
+}
+.fa-bars:hover {
+	color: #15a4fa;
+}
+
+/*rules for mobile navigation*/
+.main-nav {
+	padding: 0;
+	margin: 0;
+	overflow: hidden;
+	max-height: 0;
+	transition:max-height 1s ease-out; 
+	list-style-type: none;
+	text-align: center;
+}
+/* Style for "anchor" */
+.list-item a {
+	padding: 2rem 0;
+	display: block;
+	text-transform: uppercase;
+	font: bold 1.5rem Lato, Arial, sans-serif;
+	color: #2d3950;
+	transition: 0.4s linear; 
+}
+.list-item a:hover {
+	color: #ffffff;
+	background-color: #15a4fa;
+}
+
+.active { /*very important to write this rule at the end and for element without display, because toggle will not work*/ 
+	height:auto;
+    max-height: 23.8rem;
+}
+/*----------BANNER SECTION----------*/
+/* General style for "section banner"*/
+#banner, .banner-content {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+#banner {
+	justify-content: space-between;
+	background: url(../img/banner.png) left no-repeat;
+	background-size: cover;
+}  
+.banner-content {
+	width: 100%;
+	text-align: center;
+}
+/* Style for "main STRICT" */
+h1.main-name {
+	margin-top: 3.7rem;
+	font: 700 7.5rem Lato, Arial, sans-serif;
+	letter-spacing: 3px;
+	text-transform: uppercase;
+	color: #ffffff;
+}
+/* Style for "Line" */
+.banner-content hr {
+	border: none;
+	margin-top: 2rem;
+	width: 37.5%;
+	height: 2px;
+	background-color: #15a4fa;
+}
+/* Style for "STRICT is" */
+.banner-content p {
+	margin: 0;
+	margin-top: 2.5rem;
+	padding: 0 1.2rem;
+	color: #ffffff;
+	font: 400 1.25rem Lato, Arial, sans-serif;
+	letter-spacing: 0.5px;
+}
+/* Style for "anchor in banner" */
+.banner-content a {
+	margin-top: 4rem;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 12rem;
+	height: 5rem;
+	border: 1px solid #15a4fa;
+	color: #ffffff;
+	font: 400 1.12rem Lato, Arial, sans-serif;
+	letter-spacing: 0.45px;
+	transition: 0.8s linear;
+}
+.banner-content a:hover {
+	border: 3px solid #15a4fa;
+	background-color: #15a4fa;
+	font: 400 1.25rem Lato, Arial, sans-serif;
+	letter-spacing: 0.5px;
+}
+/*Style for "banner-icon"*/
+
+.fa-chevron-down {
+	margin: 11rem 0 5.7rem 0;
+	font-size: 3rem;
+	color: #ffffff;
+	cursor: pointer;
+}
+/*----------DESCRIPTION SECTION----------*/
+#description {
+	padding: 5rem 15.6% 6.25rem 15.6%;
+	text-align: center;
+	background-color: #f6f9f9;
+}
+/* Style for "Simple & pure" */
+#description h2 {
+	font: 400 2.5rem Lato, Arial, sans-serif;
+	color: #2d3950;
+	letter-spacing: 1px;
+}
+/* Style for "DESCRIPTION text" */
+#description p {
+	margin-top: 1.9rem;
+	font: 400 1.25rem Lato, Arial, sans-serif;
+	color: #999999;
+	line-height: 32px;
+	letter-spacing: 0.5px;
+}
+/*----------COMPONENTS SECTION----------*/
+/* Style for "margin & padding for COMPONENTS SECTION" */
+#components div.row {
+	padding: 4rem 16%;
+}
+#components div.row > div.column:nth-child(even) {	
+	margin: 10% 0;
+}
+/* Style for "tools" */
+#components div.tools {
+	text-align: center;
+}
+/* Style for div with "gradient" */
+.intools {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	align-self: center;
+	width: 6.25rem;
+	height: 6.25rem;
+	background: linear-gradient(to right, #48BAFF 50%,  #5FC3FF 50%);
+}
+/* Style for "icons" */
+.intools i {
+	font-size: 4rem;
+	color: #ffffff;
+	text-shadow: 1px 1px 1px rgba(2, 2, 2, 0.4);
+}
+/* Style for "text" */
+div.tools h3 {
+	margin-top: 2rem;
+	font: 400 1.6rem Lato, Arial, sans-serif;
+	letter-spacing: 0.55px;
+	color: #2d3950;
+}
+div.tools p {
+	margin-top: 1.4rem;
+	font: 400 1.25rem Lato, Arial, sans-serif;
+	color: #999999;
+	letter-spacing: 0.38px;
+}
+/*----------GALLERY SECTION----------*/
+/* Text style for "GALLERY SECTION" */
+div.gallery-text {
+	padding-top: 5rem;
+	text-align: center;
+}
+div.gallery-text h2 {
+	font: 400 2.6rem Lato, Arial, sans-serif;
+	letter-spacing: 1.02px;
+	color: #2d3950;
+}
+div.gallery-text p {
+	margin-top: 1.4rem;
+	font: 400 1.25rem Lato, Arial, sans-serif;
+	letter-spacing: 0.38px;
+	color: #909090;
+}
+/* Style for "GALLERY SECTION" */
+#gallery {
+	background-color: #f6f9f9;
+}
+#gallery div.row {
+	padding: 4rem 0 6.4rem 0;
+	justify-content: center;
+}
+/* Style for "img" */
+#gallery div.row div.column {
+	position: relative;
+	background-color: #15a4fa;
+	margin-top: 0.9rem;
+	min-width: 22.5rem;
+	min-height: 16.2rem;
+}
+img {
+	height: 100%;
+	width: 100%;
+}
+div.imgs {
+	display: flex;
+	transition: 0.4s linear;
+}
+div.imgs:hover {
+	opacity: 0.3;
+}
+/* Style for "div with hover links on img" */
+div.on-img {
+	visibility: hidden;
+	opacity: 0;
+	z-index: 999;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	transition: visibility 0s, opacity 0.4s linear;
+}
+#gallery div.row div.column:hover div.on-img {
+	visibility: visible;
+  	opacity: 1;
+}
+/* Style for "a links" */
+a.hover-links {
+	display: inline-flex;
+	justify-content: center;
+	align-items: center;
+	width: 5rem;
+	height: 5rem;
+	border: 1px solid #ffffff;
+	background-color: #15a4fa;
+	border-radius: 3px;
+}
+a.hover-links:first-child {
+	margin-right: 4rem;
+}
+/* Style for "font awesome links on img" */
+a.hover-links i {
+	color: #ffffff;
+	font-size: 1.8rem;
+}
+/*----------CONTACT FORM SECTION----------*/
+#contact-form {
+	position: relative;
+	text-align: center;
+	background: url(../img/BG_form.png) center no-repeat;
+	background-size: cover;
+}
+/* Style for "Stay with" */
+#contact-form h2 {
+	margin-top: 4.4rem;
+	text-align: center;
+	font: 400 2.6rem Lato, Arial, sans-serif;
+	color: #ffffff;
+	letter-spacing: 1.02px;
+}
+/* Style for "We ensure" */
+#contact-form p {
+	margin-top: 1.3rem;
+	margin-bottom: 1.9rem;
+	text-align: center;
+	font: 400 1.25rem Lato, Arial, sans-serif;
+	color: #999999;
+	letter-spacing: 0.38px;
+}
+/* Style for "align form" */
+#contact-form form.column {
+	margin: 0 auto;
+	margin-bottom: 12rem;
+	width: 80%;
+}
+form div.row {
+	flex-flow: row nowrap;
+	justify-content: space-between;
+	align-items: center;
+}
+/* Style for "input & textarea" */
+form input.info, form textarea {
+	margin-top: 1.4rem;
+	padding: 1.25rem;
+	outline: none;
+	border: 1px solid #999999;
+	color: #ffffff;
+	font: 400 1.25rem Lato, Arial, sans-serif;
+	background-color: transparent;
+	border-radius: 4px;
+	transition: 0.4s linear;
+}
+form input.info::placeholder, form textarea::placeholder {
+	color: #999999;
+	font: 400 1.25rem Lato, Arial, sans-serif;
+	transition: 0.4s linear;
+}
+form input.info {
+	height: 4.8rem;
+}
+form textarea {
+	height: 11rem;
+	resize: none;
+}
+input.info:hover, textarea:hover {
+	border: 1px solid #ffffff;
+}
+input.info:hover::placeholder, textarea:hover::placeholder{ 
+  	color: #ffffff;
+}
+form div.row {
+	margin-top: 1.4rem;
+}
+/*style for pseudo checkbox*/
+label.container {
+  display: flex;
+  align-items: center;
+  height: 26px;
+  position: relative; 
+  padding-left: 35px;
+  cursor: pointer;
+  font: 400 1.25rem Lato, Arial, sans-serif;
+  color: #ffffff;
+}
+
+/* Hide the browser's default checkbox */
+label.container input {
+  opacity: 0;
+}
+
+/* Create a custom checkbox */
+span.checkmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 25px;
+  width: 25px;
+  border-radius: 3px;
+  background-color: #999999;
+  transition: 0.4s linear;
+}
+/* Style the checkmark/indicator */
+label.container span.checkmark:after {
+  left: 9px;
+  top: 5px;
+  width: 5px;
+  height: 10px;
+  border: solid #ffffff;
+  border-width: 0 3px 3px 0;
+  transform: rotate(45deg);
+}
+/* On mouse-over, add a grey background color */
+label.container:hover input ~ .checkmark {
+  background-color: #ccc;
+}
+
+/* When the checkbox is checked, add a blue background */
+label.container input:checked ~ .checkmark {
+  background-color: #15a4fa;
+}
+
+/* Create the checkmark/indicator (hidden when not checked) */
+span.checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+/* Show the checkmark when checked */
+label.container input:checked ~ .checkmark:after {
+  display: block;
+}
+/*style for "Send"*/
+.button {
+	font: 400 1.5rem Lato, Arial, sans-serif;
+	color: #ffffff;
+	letter-spacing: 0.45px;
+	width: 9rem;
+	height: 3rem;
+	border: 1px solid #15a4fa;
+	background-color: transparent;
+	transition: 0.4s linear;
+}
+.button:hover {
+	background-color: #15a4fa;
+}
+/*style for "button up"*/
+div.up {
+	position: absolute;
+	border-radius: 50%;
+	top: 90%;
+	left: 50%;
+	transform: translate(-50%, 0);
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	background-color: transparent;
+	border: 1px solid #15a4fa;
+	width: 4rem;
+	height: 4rem;
+	cursor: pointer;
+}
+div.up:hover {
+	background-color: #15a4fa;
+}
+div.up i {
+	color: #ffffff;
+	font-size: 2rem;
+}
+/*----------FOOTER SECTION----------*/
+/*style for "align elements"*/
+footer {
+	background-color: #f6f9f9;
+}
+footer div.column {
+	padding: 1.6rem;
+	justify-content: center;
+	align-items: center;
+}
+/*style for "text"*/
+footer div.column p {
+	font: 400 1.25rem Lato, Arial, sans-serif;
+	color: #999999;
+	letter-spacing: 0.38px;
+}
+.soc-conatiner {
+	display: flex;
+}
+/*style for "social icons"*/
+.soc-icon {
+	margin-right: 2.5rem;
+    display: flex;
+    justify-content: center;
+	align-items: center;
+	width: 3.8rem;
+	height: 3.8rem;
+}
+.facebook {
+	background-color: #3b5998;
+}
+.twitter {
+	background-color: #55acee;
+}
+.google {
+	background-color: #dd4b39;
+}
+.linkedin {
+	background-color: #0976b4;
+}
+.soc-icon:last-child {
+	margin-right: 0;
+}
+.soc-icon i {
+	color: #ffffff;
+	font-size: 30px;
+}
+/*----------MEDIA QUERIES----------*/
+@media only screen and (min-width: 768px) {
+	/*----------HEADER SECTION----------*/
+	/*rules for navigation*/
+	.column {
+		flex: 1;
+	}
+	.icon {
+		display: none;
+	}
+	nav.column {
+		display: flex;
+		justify-content: center;
+	}
+	.main-nav {
+		display: flex;
+		overflow: visible;
+		max-height: 100%;
+		margin-right: 16.3%;
+	}
+	.list-item {
+		margin-left: 4%;
+	}
+	.list-item:first-child {
+		margin-left: 0;
+	}
+	.list-item a {
+		font: bold 1rem Lato, Arial, sans-serif;
+		color: #2d3950;
+		transition: 0.4s linear;
+	}
+	/*----------COMPONENTS SECTION----------*/
+	/* Style for "margin & padding for COMPONENTS SECTION" */
+	#components div.row {
+		padding: 4rem 14%;
+	}
+	#components div.row > div.column:nth-child(even) {	
+		margin: 0 6%;
+	}
+	#components div.tools {
+		max-width: 12.6rem;
+	}
+	/* Style for "text" */
+	div.tools h3 {
+		font: 400 1.4rem Lato, Arial, sans-serif;
+	}
+	div.tools p {
+		font: 400 0.9rem Lato, Arial, sans-serif;
+	}
+	/*----------GALLERY SECTION----------*/
+	/* Style for "GALLERY SECTION" */
+	#gallery {
+		background-color: #f6f9f9;
+	}
+	#gallery div.row {
+		padding: 4rem 0 6.4rem 0;
+		justify-content: center;
+	}
+	/* Style for "img" */
+	#gallery div.row div.column {
+		margin: 0.7rem;
+	}
+	a.hover-links {
+		width: 4.5rem;
+		height: 4.5rem;
+	}
+	/* Style for "a links" */
+	a.hover-links:first-child {
+		margin-right: 1.5rem;
+	}
+	/*----------CONTACT FORM SECTION----------*/
+	#contact-form form.column {
+		width: 70%;
+	}
+}	
+@media only screen and (min-width: 992px) {
+	/*----------HEADER SECTION----------*/
+	/*rules for navigation*/
+	.list-item {
+		margin-left: 11%;
+	}
+	.list-item:first-child {
+		margin-left: 0;
+	}
+	/*----------BANNER SECTION----------*/
+	/* Style for "anchor in banner" */
+	.banner-content a {
+		width: 11rem;
+		height: 3.4rem;
+	}
+	/*Style for "banner-icon"*/
+	.fa-chevron-down {
+		font-size: 2.2rem;
+	}
+	/*----------COMPONENTS SECTION----------*/
+	p, form input.info::placeholder, form textarea::placeholder, label.container {
+		font: 400 0.9rem Lato, Arial, sans-serif;
+	}
+	/*----------GALLERY SECTION----------*/
+	/* Style for "GALLERY SECTION" */
+	#gallery div.row {
+		padding: 4rem 1rem 6.4rem 1rem;
+		justify-content: center;
+	}
+	/* Style for "img" */
+	#gallery div.row div.column {
+		max-width: 34rem;
+		max-height: 24rem;
+	}
+	/* Style for "font awesome links on img" */
+	a.hover-links i {
+		color: #ffffff;
+		font-size: 1.6rem;
+	}
+	/*----------CONTACT FORM SECTION----------*/
+	/* Style for "We ensure" */
+	#contact-form p {
+		font: 400 0.9rem Lato, Arial, sans-serif;
+	}
+	#contact-form form.column {
+		width: 60%;
+	}
+	/*style for pseudo checkbox*/
+	.container {
+  		font: 400 0.9rem Lato, Arial, sans-serif;
+	}
+	.checkmark {
+	  	top: 5px;
+	    left: 0;
+	    height: 15px;
+	    width: 15px;
+	}
+	.container .checkmark:after {
+	    left: 5px;
+	    top: 2px;
+	    width: 3px;
+	    height: 6px;
+	}
+	/*style for "Send"*/
+	.button {
+		font: 400 1.12rem Lato, Arial, sans-serif;
+		width: 8.8rem;
+		height: 2.8rem;
+	}
+	.button:hover {
+		background-color: #15a4fa;
+	}
+	/*----------FOOTER SECTION----------*/
+	/*style for "align elements"*/
+	footer div.column:first-child {
+		padding-left: 14rem;
+		align-items: flex-start;
+	}
+	footer #socials {
+		padding-right: 14rem;
+		align-items: flex-end;
+	}
+	/*style for "text"*/
+	footer div.column p {
+		font: 400 0.9rem Lato, Arial, sans-serif;
+	}
+	/*style for "social icons"*/
+	.soc-icon {
+		margin-right: 1rem;
+	}
+	.soc-icon {
+		width: 2.5rem;
+		height: 2.5rem;
+	}
+	.soc-icon i {
+		color: #ffffff;
+		font-size: 0.9rem;
+	}
+}
+@media only screen and (min-width: 1200px) {
+	/*----------HEADER SECTION----------*/
+	/*rules for navigation*/
+	.list-item {
+		margin-left: 15%;
+	}
+	.list-item:first-child {
+		margin-left: 0;
+	}
+	/* Style for "GALLERY SECTION" */
+	#gallery div.row {
+		padding: 4rem 1rem 6.4rem 1rem;
+	}
+	/* Style for "img" */
+	#gallery div.row div.column {
+		max-width: 22.5rem;
+		max-height: 16.2rem;
+	}
+	/* Style for "a links" */
+	a.hover-links {
+		width: 2.5rem;
+		height: 2.5rem;
+	}	
+	a.hover-links:first-child {
+		margin-right: 1rem;
+	}
+	/* Style for "font awesome links on img" */
+	a.hover-links i {
+		color: #ffffff;
+		font-size: 0.9rem;
+	}
+	/*----------CONTACT FORM SECTION----------*/
+	/* Style for "input & textarea" */
+	form input.info {
+		height: 3.8rem;
+	}
+	form textarea {
+		height: 10rem;
+		resize: none;
+	}
+	form input.info, form textarea {
+		color: #ffffff;
+		font: 400 0.9rem Lato, Arial, sans-serif;
+	}
+	form input.info::placeholder, form textarea::placeholder {
+		font: 400 0.9rem Lato, Arial, sans-serif;
+	}
+	/* Style for "align form" */
+	#contact-form form.column {
+		margin-bottom: 7rem;
+		width: 34.6%;
+	}
+	/*style for "button up"*/
+	div.up {
+		top: 50%;
+		left: 5%;
+		transform: translate(-5%, -50%);
+	}
+}
+@media only screen and (min-width: 1500px) {
+	/* Style for "GALLERY SECTION" */
+	#gallery div.row {
+		padding: 4rem 11% 6.4rem 11%;
+	}
+	
+}
